@@ -315,12 +315,21 @@ var result = square(5);</code></pre>
       <h2><code>ifelse</code></h2>
 
       <p>Iris uses <code>ifelse</code> for an if/else statement:</p>
-
       <pre><code class="language-iris">ifelse (x &gt; 10) {
     print("Large");
 } else {
     print("Small");
 }</code></pre>
+
+      <blockquote>
+        <p><strong>Note:</strong> ifelse is currently deprecated, in favour of the newer if system. It will be removed in v3.1.0</p><br>
+        <pre><code class="language-iris">
+        if (x &gt; 10) {
+          print("Large");
+        } else {
+            print("Small");
+        }</code></pre>
+      </blockquote>
 
       <p>The parser explicitly recognizes both <code>if</code> and <code>ifelse</code>.</p>
 
@@ -415,7 +424,7 @@ table_set_index(table, index, value)</code></pre>
 
       <p>returns the first element.</p>
 
-      <p><code>table_get_index</code> searches for a value and returns its index.</p>
+      <p><code>table_get_index</code> searches for a value and returns its index. It returns -1 if it does not exist.</p>
 
       <hr>
 
